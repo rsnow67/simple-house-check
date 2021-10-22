@@ -1,4 +1,5 @@
 .login__button {
+	min-width: 296px;
 	min-height: 50px;
 	@include flex-x-y-center;
 	background: linear-gradient(104.34deg, #41522E -15.34%, #BE8022 145.95%);
@@ -7,14 +8,6 @@
 	@include font (16px, 20px, 500);
 	text-transform: capitalize;
 	color: $white-color;
-}
-
-.login__button_main {
-	min-width: 345px;
-}
-
-.login__button_small {
-	min-width: 296px;
 }
 
 .login__button:hover,

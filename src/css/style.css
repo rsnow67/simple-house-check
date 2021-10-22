@@ -178,6 +178,7 @@ body {
 }
 
 .login__button {
+  min-width: 296px;
   min-height: 50px;
   display: flex;
   justify-content: center;
@@ -193,16 +194,24 @@ body {
   color: #FFFFFF;
 }
 
-.login__button_main {
-  min-width: 345px;
-}
-
-.login__button_small {
-  min-width: 296px;
-}
-
 .login__button:hover,
 .login__button:active {
   cursor: pointer;
+}
+
+.input {
+  width: 345px;
+  min-height: 50px;
+  padding: 16px 0 16px 16px;
+  color: #424242;
+  background: #FFFFFF;
+  border: 1px solid #C9CACC;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 300;
+  font-style: normal;
 }
 /*# sourceMappingURL=style.css.map */
