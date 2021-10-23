@@ -1,8 +1,8 @@
 .app {
-	min-height: 100vh;
-	background-color: $app-bkg;
+	height: 100vh;
 
 	&__main {
+		height: 100%;
 		color: $white-color;
 	}
 }

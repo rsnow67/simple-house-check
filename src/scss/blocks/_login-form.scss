@@ -1,4 +1,9 @@
 .login-form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -191px 0 0 -205px;
+	z-index: 1;
 	width: 345px;
 	height: 318px;
 	padding: 32px;

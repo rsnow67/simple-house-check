@@ -164,11 +164,11 @@ body {
 }
 
 .app {
-  min-height: 100vh;
-  background-color: #282c34;
+  height: 100vh;
 }
 
 .app__main {
+  height: 100%;
   color: #FFFFFF;
 }
 
@@ -202,6 +202,20 @@ body {
   font-style: normal;
 }
 
+.login {
+  height: 100%;
+  background-image: url(../../img/login-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login__wrapper {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+}
+
 .login-button {
   width: 100%;
   min-height: 50px;
@@ -226,6 +240,11 @@ body {
 }
 
 .login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -191px 0 0 -205px;
+  z-index: 1;
   width: 345px;
   height: 318px;
   padding: 32px;

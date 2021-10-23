@@ -1,4 +1,3 @@
-import '../../css/style.css';
 import React, { useState } from "react";
 import Input from '../Input/Input';
 import Button from '../Button/Button';
@@ -31,29 +30,31 @@ export default function Login(props) {
 
 	return (
 		<section className="login">
-			<form className="login__form login-form">
-				<div className="login-form__inner container">
-					<h2 className="login-form__title">simple hotel check</h2>
-					<Input
-						className="login-form__input"
-						onChange={handleEmailChange}
-						text="логин"
-						type="email"
-						value={email}
-					/>
-					<Input
-						className="login-form__input"
-						onChange={handlePasswordChange}
-						text="пароль"
-						type="text"
-						value={password}
-					/>
-					<Button
-						className="login-form__button login-button"
-						text="войти"
-					/>
-				</div>
-			</form >
+			<div className="login__wrapper">
+				<form className="login__form login-form">
+					<div className="login-form__inner">
+						<h2 className="login-form__title">simple hotel check</h2>
+						<Input
+							className="login-form__input"
+							onChange={handleEmailChange}
+							text="логин"
+							type="email"
+							value={email}
+						/>
+						<Input
+							className="login-form__input"
+							onChange={handlePasswordChange}
+							text="пароль"
+							type="text"
+							value={password}
+						/>
+						<Button
+							className="login-form__button login-button"
+							text="войти"
+						/>
+					</div>
+				</form >
+			</div>
 		</section>
 	)
 }
