@@ -1,16 +1,17 @@
-.login__button {
-	min-width: 296px;
+.login-button {
+	width: 100%;
 	min-height: 50px;
 	@include flex-x-y-center;
 	background: linear-gradient(104.34deg, #41522E -15.34%, #BE8022 145.95%);
 	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
+	border: none;
 	@include font (16px, 20px, 500);
 	text-transform: capitalize;
 	color: $white-color;
 }
 
-.login__button:hover,
-.login__button:active {
+.login-button:hover,
+.login-button:active {
 	cursor: pointer;
 }

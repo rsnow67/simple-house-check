@@ -1,0 +1,23 @@
+.fieldset {
+	width: 100%;
+
+	&__legend {
+		margin: 0 0 7px 0;
+		@include font (16px, 19px, 300);
+		text-transform: capitalize;
+		color: $text-color;
+	}
+
+	&__input {
+		width: 100%;
+		height: 50px;
+		padding: 16px 0 16px 16px;
+		color: $text-color;
+		background: #FFFFFF;
+		border: 1px solid #C9CACC;
+		box-sizing: border-box;
+		border-radius: 4px;
+		outline: none;
+		@include font (16px, 18px, 300);
+	}
+}

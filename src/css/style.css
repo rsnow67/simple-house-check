@@ -142,11 +142,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
-  width: 1048px;
-  margin: 0 auto;
-}
-
 @font-face {
   font-family: "roboto";
   src: url(../fonts/roboto-regular.woff) format("woff"), url(../fonts/roboto-regular.woff2) format("woff2");
@@ -177,31 +172,23 @@ body {
   color: #FFFFFF;
 }
 
-.login__button {
-  min-width: 296px;
-  min-height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(104.34deg, #41522E -15.34%, #BE8022 145.95%);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+.fieldset {
+  width: 100%;
+}
+
+.fieldset__legend {
+  margin: 0 0 7px 0;
   font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
+  line-height: 19px;
+  font-weight: 300;
   font-style: normal;
   text-transform: capitalize;
-  color: #FFFFFF;
+  color: #424242;
 }
 
-.login__button:hover,
-.login__button:active {
-  cursor: pointer;
-}
-
-.input {
-  width: 345px;
-  min-height: 50px;
+.fieldset__input {
+  width: 100%;
+  height: 50px;
   padding: 16px 0 16px 16px;
   color: #424242;
   background: #FFFFFF;
@@ -213,5 +200,64 @@ body {
   line-height: 18px;
   font-weight: 300;
   font-style: normal;
+}
+
+.login-button {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(104.34deg, #41522E -15.34%, #BE8022 145.95%);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+
+.login-button:hover,
+.login-button:active {
+  cursor: pointer;
+}
+
+.login-form {
+  width: 345px;
+  height: 318px;
+  padding: 32px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+}
+
+.login-form__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form__title {
+  margin: 0 0 32px 0;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  font-style: normal;
+  color: #424242;
+  text-transform: capitalize;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.login-form__input {
+  margin: 0 0 24px 0;
+}
+
+.login-form__button {
+  margin: 8px 0 0 0;
 }
 /*# sourceMappingURL=style.css.map */
