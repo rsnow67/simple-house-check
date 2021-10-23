@@ -1,13 +1,12 @@
 import Login from '../Login/Login';
+import Router from '../Router/Router';
 
 function App() {
-  return (
-    <div className="app">
-      <main className="app__main main">
-        <Login />
-      </main>
-    </div>
-  );
+	return (
+		<div className="app">
+			<Router />
+		</div>
+	);
 }
 
 export default App;
