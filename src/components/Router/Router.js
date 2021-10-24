@@ -1,25 +1,25 @@
+import React from 'react';
 import { useSelector } from 'react-redux';
-import { Switch, Route } from 'react-router';
-import { Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router';
+import PrivateRoute from '../../hocs/PrivateRoute';
+import { loginSelector } from '../../selectors/login';
 import Hotels from '../Hotels/Hotels';
 import Login from '../Login/Login';
 
-const PrivateRoute = (props) => {
-	const isAuthed = useSelector((state) => state.login.isAuthed);
-	return isAuthed ? <Route {...props} /> : <Redirect to="/login" />
-}
-
 export default function Router() {
+	const isAuthed = useSelector(loginSelector);
+
 	return (
 		<Switch>
-			<Route path="/" exact>
-				<Login />
+			<Route path="/login" exact render={() => {
+				return isAuthed ? <Redirect to="/" /> : <Login />
+			}}>
 			</Route>
-			<PrivateRoute path="/hotels" exact>
+			<PrivateRoute path="/" exact>
 				<Hotels />
 			</PrivateRoute>
 			<Route>
-				<p>404: not found</p>
+				<Redirect to="/" />
 			</Route>
 		</Switch>
 	)

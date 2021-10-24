@@ -1,28 +1,45 @@
 import React, { useState } from "react";
 import Input from '../Input/Input';
 import Button from '../Button/Button';
+import { useDispatch } from "react-redux";
+import { changeIsAuthed } from "../../actions/login";
+import { useHistory } from "react-router";
 
-export default function Login(props) {
+export default function Login() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	const [error, setError] = useState('');
+	const [loginError, setLoginError] = useState('');
+	const [passwordError, setPasswordError] = useState('');
+	const dispatch = useDispatch();
+	const history = useHistory();
 
 	const handleEmailChange = (event) => setEmail(event.target.value);
 	const handlePasswordChange = (event) => setPassword(event.target.value);
 
-	const handleLogin = () => { };
+	const handleLogin = () => {
+		dispatch(changeIsAuthed(true));
+		history.push('/');
+		localStorage.setItem('isAuthed', 'true');
+	};
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		setError('');
-		if (!email) {
-			setError('Вы не ввели адрес электронной почты');
+		setLoginError('');
+		setPasswordError('');
+
+		const emailRegExp = /.+@.+\..+/i;
+		const passwordRegExp = /[а-я]/i;
+
+		if (!emailRegExp.test(email)) {
+			setLoginError('Вы ввели адрес почты некорректного формата');
 			return;
 		}
-		if (!password) {
-			setError('Вы не ввели пароль');
+
+		if (passwordRegExp.test(password) || password.length < 8) {
+			setPasswordError('Пароль должен содержать не менее 8 символов без использования кириллицы');
 			return;
 		}
+
 		handleLogin();
 		setEmail('');
 		setPassword('');
@@ -32,18 +49,24 @@ export default function Login(props) {
 		<main className="app__main main">
 			<section className="login">
 				<div className="login__wrapper">
-					<form className="login__form login-form">
+					<form
+						action="#"
+						className="login__form login-form"
+						onSubmit={handleSubmit}
+					>
 						<div className="login-form__inner">
 							<h2 className="login-form__title">simple hotel check</h2>
 							<Input
 								className="login-form__input"
+								error={loginError}
 								onChange={handleEmailChange}
 								text="логин"
-								type="email"
+								type="text"
 								value={email}
 							/>
 							<Input
 								className="login-form__input"
+								error={passwordError}
 								onChange={handlePasswordChange}
 								text="пароль"
 								type="text"
@@ -52,6 +75,7 @@ export default function Login(props) {
 							<Button
 								className="login-form__button login-button"
 								text="войти"
+								type="submit"
 							/>
 						</div>
 					</form >

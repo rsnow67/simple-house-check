@@ -1,7 +1,7 @@
 import { CHANGE_IS_AUTHED } from "../actions/login";
 
 const initialState = {
-	isAuthed: true
+	isAuthed: localStorage.getItem('isAuthed')
 }
 
 export default function loginReducer(state = initialState, action) {
