@@ -60,7 +60,7 @@ export default function Login() {
 								className="login-form__input"
 								error={loginError}
 								onChange={handleEmailChange}
-								text="логин"
+								text="Логин"
 								type="text"
 								value={email}
 							/>
@@ -68,7 +68,7 @@ export default function Login() {
 								className="login-form__input"
 								error={passwordError}
 								onChange={handlePasswordChange}
-								text="пароль"
+								text="Пароль"
 								type="text"
 								value={password}
 							/>
