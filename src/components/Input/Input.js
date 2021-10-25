@@ -13,10 +13,12 @@ export default function Input(props) {
 
 	let legendClassName = 'fieldset__legend';
 	let inputClassName = 'fieldset__input';
+	let errorClassName = 'fieldset__error hidden'
 
 	if (error) {
 		legendClassName = `${legendClassName} fieldset__legend_red`;
 		inputClassName = `${inputClassName} fieldset__input_red`;
+		errorClassName = 'fieldset__error';
 	}
 
 	return (
@@ -31,7 +33,7 @@ export default function Input(props) {
 				type={type}
 				value={value}
 			></input>
-			<p className="fieldset__error">
+			<p className={errorClassName}>
 				{error}
 			</p>
 		</fieldset>

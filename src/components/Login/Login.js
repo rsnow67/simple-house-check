@@ -73,8 +73,8 @@ export default function Login() {
 								value={password}
 							/>
 							<Button
-								className="login-form__button login-button"
-								text="войти"
+								className="login-form__button form-button"
+								text="Войти"
 								type="submit"
 							/>
 						</div>
