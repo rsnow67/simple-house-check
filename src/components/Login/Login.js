@@ -55,7 +55,7 @@ export default function Login() {
 						onSubmit={handleSubmit}
 					>
 						<div className="login-form__inner">
-							<h2 className="login-form__title">simple hotel check</h2>
+							<h2 className="login-form__title title title_bordered">simple hotel check</h2>
 							<Input
 								className="login-form__input"
 								error={loginError}

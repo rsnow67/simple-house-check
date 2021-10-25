@@ -6,9 +6,24 @@ body {
 	font-style: normal;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: $app-bkg;
 }
 
-// .container {
-// 	width: 1048px;
-// 	margin: 0 auto;
-// }
+.container {
+	width: 1440px;
+	margin: 0 auto;
+}
+
+.title {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 500;
+	font-style: normal;
+	color: $text-color;
+	text-transform: capitalize;
+}
+
+.title_bordered {
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}

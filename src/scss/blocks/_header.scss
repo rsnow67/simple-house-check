@@ -1,0 +1,24 @@
+.header {
+	&__wrapper {
+		height: 92px;
+		@include flex-space-between;
+		align-items: center;
+	}
+
+	&__exit-button {
+		width: 83px;
+		height: 24px;
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border: none;
+		background: transparent;
+		@include font (16px, 20px, 400);
+		color: $swampy-color;
+	}
+
+	&__exit-button:hover {
+		cursor: pointer;
+	}
+}

@@ -20,11 +20,6 @@
 
 	&__title {
 		margin: 0 0 32px 0;
-		@include font(24px, 28px, 500);
-		color: $text-color;
-		text-transform: capitalize;
-		-webkit-text-stroke-width: 1px;
-		-webkit-text-stroke-color: black;
 	}
 
 	&__input {
