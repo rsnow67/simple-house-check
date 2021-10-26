@@ -1,11 +1,11 @@
 import { combineReducers, createStore } from 'redux';
-import loginReducer from '../reducers/login';
+import { loginReducer } from './reducers/login';
 
 const rootReducer = combineReducers({
-	login: loginReducer,
+    login: loginReducer,
 });
 
 export const store = createStore(
-	rootReducer,
-	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    rootReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )

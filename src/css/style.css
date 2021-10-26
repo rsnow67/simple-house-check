@@ -320,7 +320,7 @@ body {
   align-items: center;
 }
 
-.header__exit-button {
+.header__logout-button {
   width: 83px;
   height: 24px;
   padding: 0;
@@ -336,7 +336,7 @@ body {
   color: #41522E;
 }
 
-.header__exit-button:hover {
+.header__logout-button:hover {
   cursor: pointer;
 }
 

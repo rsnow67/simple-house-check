@@ -1,21 +1,19 @@
 import React from "react";
 
-export default function Button(props) {
-	const {
-		className,
-		onSubmit,
-		text,
-		type
-	} = props;
+export const Button = (props) => {
+    const {
+        className,
+        text,
+        type
+    } = props;
 
-	return (
-		<button
-			className={className}
-			onClick={onSubmit}
-			type={type}
-		>
-			{text}
-		</button>
-	)
+    return (
+        <button
+            className={className}
+            type={type}
+        >
+            {text}
+        </button>
+    )
 }
 

@@ -5,7 +5,7 @@
 		align-items: center;
 	}
 
-	&__exit-button {
+	&__logout-button {
 		width: 83px;
 		height: 24px;
 		padding: 0;
@@ -18,7 +18,7 @@
 		color: $swampy-color;
 	}
 
-	&__exit-button:hover {
+	&__logout-button:hover {
 		cursor: pointer;
 	}
 }
