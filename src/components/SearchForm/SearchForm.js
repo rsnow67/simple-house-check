@@ -4,10 +4,7 @@ import { Input } from "../Input/Input";
 
 export const SearchForm = () => {
     return (
-        <form
-            action="#"
-            className="search__form search-form"
-        >
+        <form className="search__form search-form">
             <div className="search-form__inner">
                 <Input
                     className="search-form__fieldset"

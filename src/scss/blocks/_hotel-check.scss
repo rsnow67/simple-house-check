@@ -1,10 +1,19 @@
 .hotel-check {
+	min-height: 902px;
+	padding: 0 0 24px 0;
+
 	&__wrapper {
 		width: 1048px;
 		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
 	}
 
 	&__left-inner {
 		width: 360px;
+	}
+
+	&__right-inner {
+		width: 664px;
 	}
 }

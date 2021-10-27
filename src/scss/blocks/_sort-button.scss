@@ -1,0 +1,19 @@
+.sort-button {
+	min-width: 71px;
+	height: 28px;
+	padding: 4px 8px;
+	margin: 0 8px 0 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #41522E;
+	box-sizing: border-box;
+	border-radius: 4px;
+	background: $white-color;
+	@include font (14px, 20px, 400);
+	color: $swampy-color;
+}
+
+.sort-button:hover {
+	cursor: pointer;
+}
