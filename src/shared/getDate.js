@@ -1,9 +1,12 @@
-export const currentDate = () => {
+export const getDate = (incr = 0) => {
     const today = new Date();
-    return `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`
-}
+    today.setDate(today.getDate() + incr);
 
-export const tomorrowDate = () => {
-    const tomorrow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000)
-    return `${tomorrow.getFullYear()}-${tomorrow.getMonth() + 1}-${tomorrow.getDate()}`
+    let dd = today.getDate();
+
+    if (dd < 10) {
+        dd = `0${dd}`;
+    }
+
+    return `${today.getFullYear()}-${today.getMonth() + 1}-${dd}`
 }

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
 import { PrivateRoute } from './PrivateRoute';
-import { Hotels } from '../Hotels/Hotels';
+import { HotelsPage } from '../HotelsPage/HotelsPage';
 import { Login } from '../Login/Login';
 
 export const Router = () => {
     return (
         <Switch>
             <PrivateRoute path="/" exact>
-                <Hotels />
+                <HotelsPage />
             </PrivateRoute>
             <Route path="/login">
                 <Login />
